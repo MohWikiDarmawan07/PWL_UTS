@@ -21,5 +21,5 @@ class Barang extends Model
         'harga',
         'qty'
     ];
-    
+    use HasFactory;
 };
