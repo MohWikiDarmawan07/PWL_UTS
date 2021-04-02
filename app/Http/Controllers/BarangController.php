@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Barang;
 class BarangController extends Controller
 {
     /**
@@ -16,7 +16,7 @@ class BarangController extends Controller
         //fungsi eloquent menampilkab data menggunakan pagination
         $barangs = Barang::all(); //mengambil semua isi table
         $posts = Barang::orderBy('id_barang', 'desc')->paginate(6);
-        return view('barangs.index', compact('barangs'));
+        return view('barangs.index', compact('posts'));
         with('i', (request()->input('page', 1) - 1) * 5);
     }
 

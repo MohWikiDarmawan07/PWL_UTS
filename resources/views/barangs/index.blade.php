@@ -25,7 +25,7 @@
     <th>qty</th>
     <th width="280px">Action</th>
 </tr>
-@foreach ($barangs as $Barang)
+@foreach ($posts as $Barang)
 <tr>
     <td>{{ $Barang->id_barang }}</td>
     <td>{{ $Barang->kode_barang }}</td>
