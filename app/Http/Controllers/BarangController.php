@@ -45,14 +45,14 @@ class BarangController extends Controller
             'nama_barang' => 'required',
             'kategori_barang' => 'required',
             'harga' => 'required',
-            'qty' => 'required',
+            'qty' => 'required'
         ]);
 
         //fungsi eloquent untuk tambah data
         Barang::create($request->all());
 
         //jika tidak berhasil akan kembali ke halaman awal
-        return redirect()->route('barangs.index')
+        return redirect()->route('barang.index')
         ->with('success', 'Barang berhasil ditambahkan');
 
     }
