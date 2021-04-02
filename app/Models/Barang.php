@@ -12,7 +12,7 @@ class Barang extends Model
 {
     protected $table = "barangs";
     public $timestamp = false;
-    protected $primarykey = 'id_barang';
+    protected $primaryKey = 'id_barang';
     protected $fillable = [
         'id_barang',
         'kode_barang',
